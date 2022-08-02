@@ -11,6 +11,7 @@
 
   <div id="hello-world-app">
     <h1>{{ msg }}</h1>
+    <p>{{timestamp}}</p>
   </div>
 
 
@@ -19,7 +20,8 @@
       el: "#hello-world-app",
       data() {
         return {
-          msg: "Hello World from Joshua via Vue.js"
+          msg: "Hello World from Joshua via Vue.js",
+          timestamp: new Date().toLocaleString()
         }
       }
     });

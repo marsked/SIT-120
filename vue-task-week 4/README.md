@@ -1,6 +1,6 @@
 # vue-task1
 
-This template should help get you started developing with Vue 3 in Vite.
+my Vue 3 task.
 
 ## Recommended IDE Setup
 

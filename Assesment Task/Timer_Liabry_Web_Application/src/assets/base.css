@@ -3,12 +3,9 @@
 /* semantic color variables for this project */
 :root {
   --color-background: #181818;
-
   --color-border: #00bd7e;
-
   --color-heading: #2763bb;
   --color-text: #FFFFFF;
-
   --section-gap: 160px;
 }
 

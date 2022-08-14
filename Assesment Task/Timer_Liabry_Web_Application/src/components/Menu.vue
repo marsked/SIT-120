@@ -5,28 +5,31 @@ import TimersIcon from './icons/TimersIcon.vue'
 import AboutIcon from './icons/AboutIcon.vue'
 </script>
 
+<!-- Lays out the timer block -->
 <template>
-      <MenuItem>
-        <template #icon>
-          <TimersIcon />
-        </template>
-        <template #heading>Timers</template>
-        Our collection of useful timers  
-      </MenuItem>
   <MenuItem>
-    <template #icon>
-      <NewsIcon />
-    </template>
-    <template #heading>News & Events</template> 
-    Comming Soon
+  <template #icon>
+    <TimersIcon />
+  </template>
+  <template #heading>Timers</template>
+  Our collection of useful timers
   </MenuItem>
 
-
+  <!-- Lays out the News & Evets Block -->
   <MenuItem>
-    <template #icon>
-      <AboutIcon />
-    </template>
-    <template #heading>About</template>
-    Exciting information about the creator of this appiliaiton 
+  <template #icon>
+    <NewsIcon />
+  </template>
+  <template #heading>News & Events</template>
+  Comming Soon
+  </MenuItem>
+
+  <!-- Lays out the about us block -->
+  <MenuItem>
+  <template #icon>
+    <AboutIcon />
+  </template>
+  <template #heading>About</template>
+  Exciting information about the creator of this appiliaiton
   </MenuItem>
 </template>

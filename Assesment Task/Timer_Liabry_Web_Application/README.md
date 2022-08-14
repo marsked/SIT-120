@@ -19,3 +19,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+<!-- TO VIEW THE WEB APP USE COMAND npm run dev !!-->

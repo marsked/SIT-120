@@ -3,6 +3,11 @@ defineProps({
   msg: {
     type: String,
     required: true
+  },
+ // update state of the checkbox on screen in real time 
+ checked: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -12,8 +17,14 @@ defineProps({
     <h1 class="green">{{ msg }}</h1>
     <h3>
       You’ve successfully created a project with
-      <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>.
+      <input v-model="email" placeholder="Email">
+      <p>Email is: {{ email }}</p>
+      <br>
+      <input v-model="name" placeholder="Name">
+      <p>Name is: {{ name }}</p>
+      <br><br>
+      <input type="checkbox" id="checkbox" v-model="checked">
+      <label for="checkbox"> on? {{ checked }}</label>
     </h3>
   </div>
 </template>
@@ -35,6 +46,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;

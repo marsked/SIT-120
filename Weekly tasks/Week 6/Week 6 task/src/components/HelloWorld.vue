@@ -4,10 +4,19 @@ defineProps({
     type: String,
     required: true
   },
- // update state of the checkbox on screen in real time 
- checked: {
+  // Update state of the checkbox on screen in real time 
+  checked: {
     type: Boolean,
     default: false
+  },
+  // realtime disply of text input 
+  email: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: false
   }
 })
 </script>

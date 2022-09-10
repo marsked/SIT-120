@@ -1,0 +1,19 @@
+.mytable {
+    color: red;
+    border-color: blue;
+    border-style: solid;
+    border-width: 2px;
+    border-collapse: collapse;
+}
+
+.mytable td {
+    color: red;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10PX;
+}
+
+.two-column {
+    column-count: 2;
+}

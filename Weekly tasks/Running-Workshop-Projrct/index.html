@@ -1,57 +1,73 @@
 <!DOCTYPE html>
+
 <head>
-       <title>My first Webpage</title>
-       <!-- internal styling rules -->
-       <style>
-        .heading{
-            color:blue ;
+    <meta name="viewport" content="width=device-width">
+    <title>My first Webpage</title>
+    <!-- internal styling rules -->
+    <style>
+        .heading {
+            color: blue;
         }
-       </style>
-       <!-- external styling rules -->
-       <link rel="stylesheet" href="project.css">
-       <!-- external JavaScript file -->
-       <script src="script\project.js"></script>
+    </style>
+    <!-- external styling rules -->
+    <link rel="stylesheet" href="project.css">
+    <!-- external JavaScript file -->
+    <script src="script\project.js"></script>
 </head>
+
 <body>
-    <div class="two-column"> 
+    <div class="columns">
 
-    
-<h1 class="heading" >HTML Project</h1>
-    <img src="image\cybertruck.png" alt="cybertruck">
 
-    <p><a href="https://www.tesla.com/en_au/cybertruck" target="_blank">More Info</a></p>
-    <br> <br>
-    <h2 class="heading">Top 4 Austalian EVs by Sales</h2>
-    <table class="mytable">
-        <thead>
-            <tr>
-                <th>Model</th>
-                <th>H1 2022 sales</th>
-            </tr>
-        </thead>
+        <h1 class="heading">HTML Project</h1>
+        <img src="image\cybertruck.png" alt="cybertruck">
 
-        <tbody>
+        <p><a href="https://www.tesla.com/en_au/cybertruck" target="_blank">More Info</a></p>
+        <br> <br>
+        <h2 class="heading">Top 4 Austalian EVs by Sales</h2>
+        <table class="mytable">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>H1 2022 sales</th>
+                </tr>
+            </thead>
 
-            <tr><td>Tesla Model 3</td> <td>4653</td></tr>
-            <tr><td>Hyundai Kona Electric </td> <td>570</td></tr>
-            <tr><td>Polestar 2</td> <td>562</td></tr>
-            <tr><td>Volvo XC40 Recharge Pure Electric</td> <td>505</td></tr>
-            
-        </tbody>
-    </table> 
-    
-    <br> <br>
-    
-    <h2 class="heading">Enter Name</h2>
-    <form>  
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname" value="Joshua"><br>
-      
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname" value="Erickson"><br><br>
-        <button  onclick="display_name();return false">Submit</button>
-    </form>
-    <p id="my-output" style = "color: purple; font-size: x-large;"></p>
-</div>
+            <tbody>
+
+                <tr>
+                    <td>Tesla Model 3</td>
+                    <td>4653</td>
+                </tr>
+                <tr>
+                    <td>Hyundai Kona Electric </td>
+                    <td>570</td>
+                </tr>
+                <tr>
+                    <td>Polestar 2</td>
+                    <td>562</td>
+                </tr>
+                <tr>
+                    <td>Volvo XC40 Recharge Pure Electric</td>
+                    <td>505</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <br> <br>
+
+        <h2 class="heading">Enter Name</h2>
+        <form>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="Joshua"><br>
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" value="Erickson"><br><br>
+            <button onclick="display_name();return false">Submit</button>
+        </form>
+        <p id="my-output" style="color: purple; font-size: x-large;"></p>
+    </div>
 </body>
+
 </html>

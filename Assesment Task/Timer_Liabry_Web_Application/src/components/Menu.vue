@@ -11,7 +11,7 @@ import AboutIcon from './icons/AboutIcon.vue'
   <template #icon>
     <TimersIcon />
   </template>
-  <template #heading>Timers</template>
+  <template #heading><router-link to="/chesstimer">Chess Timer</router-link></template>
   Our collection of useful timers
   </MenuItem>
 

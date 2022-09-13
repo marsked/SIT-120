@@ -1,18 +1,47 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import Welcome from '../components/Welcome.vue'
+import Menu from '../components/Menu.vue'
 </script>
+    
+<template>
+    <header>
+        <img alt="Vue logo" class="logo" src="src\assets\chess_clock_large.png" width="125" height="125" />
+
+        <div class="wrapper">
+            <Welcome msg="Welcome To Timer Library!" />
+        </div>
+    </header>
+
+    <main>
+        <Menu />
+    </main>
+</template>
+    
+<style scoped>
+header {
+    line-height: 1.5;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        place-items: center;
+        padding-right: calc(var(--section-gap) / 2);
+    }
+
+    .logo {
+        margin: 0 2rem 0 0;
+    }
+
+    header .wrapper {
+        display: flex;
+        place-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+</style>

@@ -4,44 +4,74 @@ import Menu from '../components/Menu.vue'
 </script>
     
 <template>
-    <header>
-        <img alt="Vue logo" class="logo" src="src\assets\chess_clock_large.png" width="125" height="125" />
+    <div class="home">
 
-        <div class="wrapper">
-            <Welcome msg="Welcome To Timer Library!" />
-        </div>
-    </header>
+        <header>
+            <img alt="Vue logo" class="logo" src="src\assets\chess_clock_large.png" width="125" height="125" />
 
-    <main>
-        <Menu />
-    </main>
+            <div class="wrapper">
+                <Welcome msg="Welcome To Timer Library!" />
+            </div>
+        </header>
+
+        <main>
+            <Menu />
+        </main>
+    </div>
 </template>
     
 <style scoped>
+.home {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 header {
-    line-height: 1.5;
+    text-align: center;
+    width: auto;
+    ;
+}
+
+
+main {
+    margin-left: 100px;
 }
 
 .logo {
-    display: block;
     margin: 0 auto 2rem;
+    width: 155px;
+    height: 155px;
 }
 
-@media (min-width: 1024px) {
-    header {
+/* medium screen */
+@media (max-width: 1024px) {
+
+    .home {
         display: flex;
-        place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
+        flex-direction: column;
+        flex-wrap: wrap
+    }
+
+    main {
+        margin-left: 30px;
     }
 
     .logo {
-        margin: 0 2rem 0 0;
+        margin: 0 auto 2rem;
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/* small screen */
+@media (max-width: 500px) {
+
+    .logo {
+        margin: 0 auto 0.5rem;
+        width: 50px;
+        height: 50px;
     }
 
-    header .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-    }
 }
 </style>

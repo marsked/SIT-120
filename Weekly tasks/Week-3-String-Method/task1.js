@@ -32,4 +32,4 @@ console.log(`Before: ${favourite_text}  |  After: ${replaced_text}`);
 // Returns true if search String exists as a substring of the string
 var message = 'Javascript string methods are amazing!!';
 let result = message.includes("amazing");
-console.log(`"${message}" includes the word "amazing" =  ${result}`);
+console.log(`"${message}" includes the word "amazing" =  ${result}`); 

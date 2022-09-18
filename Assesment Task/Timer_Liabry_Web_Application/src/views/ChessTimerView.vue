@@ -30,20 +30,17 @@ class Clock {
     this.min = min;
     this.sec = 60;
   }
-
   getMinutes() {
     return this.min
   }
 }
 
 
-
-
 // Start the clocks ticking.
 function start() {
 
   let p1time = new Clock(min1.value);
-let p2time = new Clock(min2.value);
+  let p2time = new Clock(min2.value);
 
   playing.value = true;
   // use Javascrip setInterval function to execute the function every
@@ -69,7 +66,7 @@ let p2time = new Clock(min2.value);
             clearInterval(timer);
             playing.value = false;
           }
-          // otherwise reset player 1 seconds to 60 again ready for next minute
+          // otherwise reset player1 seconds to 60 again ready for next minute
           p1sec = 60;
         }
       }
@@ -90,7 +87,7 @@ let p2time = new Clock(min2.value);
             clearInterval(timer);
             playing.value = false;
           }
-          // otherwise reset plkayer 2 seconds to 60 again ready for next minute
+          // otherwise reset player2 seconds to 60 again ready for next minute
           p2sec = 60;
         }
       }
@@ -98,22 +95,21 @@ let p2time = new Clock(min2.value);
   }, 1000)
 }
 
-function reset(){
+function reset() {
   // reset all time and player values to default start values
   clearInterval(timer);
   playing.value = false;
-min1.value = 10;
-min2.value = 10;
-sec1.value = 0;
-sec2.value = 0;
-p1sec = 60;
-p2sec = 60;
-currentPlayer = 0;
+  min1.value = 10;
+  min2.value = 10;
+  sec1.value = 0;
+  sec2.value = 0;
+  p1sec = 60;
+  p2sec = 60;
+  currentPlayer.value = 0;
 }
 
 function isCurrentPlayer(player_no) {
   if (player_no === currentPlayer.value) {
-    console.log(`isCurrentPlayer(): current player = ${currentPlayer.value} | player_no = ${player_no}`);
     return true
   } else return false
 }
@@ -128,7 +124,7 @@ function isCurrentPlayer(player_no) {
   <div class="timer">
     <br>
     <h1>Chess Timer</h1>
-<br>
+    <br>
 
   </div>
 
@@ -137,7 +133,8 @@ function isCurrentPlayer(player_no) {
     <!-- player 1 -->
     <div class="player one">
 
-      <button class="my_button turn_button" v-on:click="swap()" :disabled="isCurrentPlayer(1) || !playing">End Turn</button>
+      <button class="my_button turn_button" v-on:click="swap()" :class="{ turn_button_enabled : isCurrentPlayer(0) && playing}"
+        :disabled="isCurrentPlayer(1) || !playing">End Turn</button>
       <h2 class="label">PLAYER 1</h2>
 
       <div class="digits">
@@ -152,7 +149,8 @@ function isCurrentPlayer(player_no) {
         <h2 class="numbers" :class="{ active_player_time: isCurrentPlayer(1)}">{{min2}}:{{sec2}}</h2>
       </div>
       <h2 class="label">PLAYER 2</h2>
-      <button class="my_button turn_button" v-on:click="swap()" :disabled="isCurrentPlayer(0)">End Turn</button>
+      <button class="my_button turn_button" v-on:click="swap()" :class="{ turn_button_enabled : isCurrentPlayer(1) && playing}"
+        :disabled="isCurrentPlayer(0)">End Turn</button>
 
     </div><!-- END player 2 -->
 
@@ -166,17 +164,17 @@ function isCurrentPlayer(player_no) {
 </template>
     
 <style scoped>
-  .settings {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
+.settings {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
-  .timer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
 .my_button {
   padding-top: 10px;
@@ -188,15 +186,26 @@ function isCurrentPlayer(player_no) {
   margin: 10px;
 }
 
-.turn_button {
-  background-color: var(--color-heading);
+.turn_button_disabled {
+  background-color: var(--color-text);
+  color: var(--color-text);
+  cursor: none;
 }
+
+.turn_button_enabled {
+  background-color: var(--color-heading);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
 .start_button {
   background-color: var(--color-border);
 }
+
 .reset_button {
   background-color: var(--color-red);
 }
+
 .active_player_time {
   color: var(--color-border);
 }
@@ -205,5 +214,4 @@ function isCurrentPlayer(player_no) {
   font-size: 3.5rem;
   color: var(--color-text);
 }
-
 </style>

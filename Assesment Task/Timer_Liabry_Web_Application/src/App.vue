@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <!-- calls to the router script -->
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
@@ -12,7 +13,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--color-text);
 }
 
 nav {
@@ -21,7 +22,7 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--color-text);
 }
 
 nav a.router-link-exact-active {

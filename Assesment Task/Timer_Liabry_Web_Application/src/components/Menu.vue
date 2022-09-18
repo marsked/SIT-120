@@ -12,16 +12,6 @@ import AboutIcon from './icons/AboutIcon.vue'
     <TimersIcon />
   </template>
   <template #heading><router-link to="/chesstimer">Chess Timer</router-link></template>
-  Our collection of useful timers
-  </MenuItem>
-
-  <!-- Lays out the News & Evets Block -->
-  <MenuItem>
-  <template #icon>
-    <NewsIcon />
-  </template>
-  <template #heading>News & Events</template>
-  Comming Soon
   </MenuItem>
 
   <!-- Lays out the about us block -->
@@ -29,7 +19,7 @@ import AboutIcon from './icons/AboutIcon.vue'
   <template #icon>
     <AboutIcon />
   </template>
-  <template #heading>About</template>
-  Exciting information about the creator of this appiliaiton
+  <template #heading><router-link to="/stopwatch">Stop Watch</router-link></template>
   </MenuItem>
+
 </template>

@@ -39,8 +39,8 @@ class Clock {
 // Start the clocks ticking.
 function start() {
 
-  let p1time = new Clock(min1.value);
-  let p2time = new Clock(min2.value);
+  p1time = new Clock(min1.value);
+  p2time = new Clock(min2.value);
 
   playing.value = true;
   // use Javascrip setInterval function to execute the function every

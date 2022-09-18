@@ -22,6 +22,14 @@ const routes = [
     component: function () {
       return import('../views/ChessTimerView.vue')
     }
+  },
+  {
+    path: '/stopwatch',
+    name: 'stopwatch',
+
+    component: function () {
+      return import('../views/StopWatchView.vue')
+    }
   }
 ]
 

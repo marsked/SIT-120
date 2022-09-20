@@ -24,7 +24,6 @@ function swap() {
 }
 
 
-// Create a class.
 class Clock {
   constructor(min) {
     this.min = min;

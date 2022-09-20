@@ -7,7 +7,7 @@ import Menu from '../components/Menu.vue'
     <div class="home">
 
         <header>
-            <img alt="Vue logo" class="logo" src="src\assets\chess_clock_large.png" width="125" height="125" />
+            <img alt="Vue logo" class="logo" src="/src\assets\chess_clock_large.png" width="125" height="125" />
 
             <div class="wrapper">
                 <Welcome msg="Welcome To Timer Library!" />

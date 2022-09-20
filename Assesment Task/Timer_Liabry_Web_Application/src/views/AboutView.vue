@@ -1,8 +1,12 @@
 <!-- lays out the about page -->
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ipsum consequuntur officiis, esse perspiciatis laborum architecto iure alias iste asperiores aliquid. Ratione aliquid ad ipsa excepturi pariatur modi? Quasi quia veritatis, commodi iure officiis dicta debitis doloremque recusandae accusantium labore iste rem aperiam earum optio maiores ut consectetur repellendus dolorem aut aspernatur deleniti voluptas animi! Quo voluptatem porro aliquid error molestias rerum saepe pariatur officia modi, aut culpa amet voluptate nulla facere repellat animi qui nisi veritatis hic veniam nobis id ipsum! Tempore, quos reprehenderit dolore officiis culpa veniam voluptatum quibusdam atque, quae, necessitatibus eum temporibus placeat deleniti expedita dicta!
+  <div>
+    <h1>SIT120 Assesment 3 Project</h1>
+    <p>This application is a timer resource website for the use of those who may need selection of various timers for
+      use by those who need easy access to such tools.</p>
+    <p>First and foremost it will be, as mentioned above, a library of various timers for use in a number of
+      applications (i.e. chess) sorted in a convenient and accessible format.</p>
+    <p>It will also include functionality for users to report bugs and request new auditions as well as a change log in the future.
     </p>
   </div>
 </template>

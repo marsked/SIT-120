@@ -1,4 +1,5 @@
 <script setup>
+//LOCALY registerded components
 import { ref } from 'vue'
 
 // Reactive Ref variables used in HTML 

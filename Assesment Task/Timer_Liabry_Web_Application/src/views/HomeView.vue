@@ -1,4 +1,5 @@
 <script setup>
+//LOCALY registerded components
 import Welcome from '../components/Welcome.vue'
 import Menu from '../components/Menu.vue'
 </script>
@@ -15,7 +16,7 @@ import Menu from '../components/Menu.vue'
         </header>
 
         <main>
-            <Menu />
+            <Menu></Menu>
         </main>
     </div>
 </template>

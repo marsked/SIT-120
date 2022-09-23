@@ -1,4 +1,5 @@
 <script setup>
+// Import ref()  to create vue reactive properties
 import { ref } from 'vue'
 
 // Reactive Ref variables used in HTML 
@@ -7,12 +8,12 @@ let sec = ref(0);
 let running = ref(false);
 let lap_time_list = ref([""]);
 
-// Internal function variables not used in HTML 
+// Internal function variables not used in HTML (NOT Reactive)
 let timer = null
 let watchtime = null
 let watchsec = 0;
 
-// Create a class.
+// Create a watch class to keep tack of time.
 class Watch {
   constructor(min) {
     this.min = min;
@@ -28,7 +29,7 @@ class Watch {
 function start() {
   watchtime = new Watch(min.value);
   running.value = true;
-  // use Javascrip setInterval function to execute the function every
+  // use Javascrip setInterval function to execute the callback function every
   // 1000 milliseconds (which is every 1 second) 
   timer = setInterval(function () {
 
@@ -54,7 +55,7 @@ function lap(minutes, seconds) {
 }
 
 function reset() {
-  // reset all time and player values to default start values
+  // reset all time values to default start values
   clearInterval(timer);
   running.value = false;
   min.value = 0;
@@ -142,10 +143,6 @@ function reset() {
 
 .reset_button {
   background-color: var(--color-red);
-}
-
-.active_player_time {
-  color: var(--color-border);
 }
 
 .digits {

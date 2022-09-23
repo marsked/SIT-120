@@ -1,11 +1,11 @@
 <script setup>
+//LOCALY registerded components 
 import MenuItem from './MenuItem.vue'
-import NewsIcon from './icons/NewsIcon.vue'
 import TimersIcon from './icons/TimersIcon.vue'
-import AboutIcon from './icons/AboutIcon.vue'
+import StopWatchIcon from './icons/StopWatchIcon.vue'
 </script>
 
-<!-- Lays out the timer block -->
+<!-- Lays out the chess timer menu item -->
 <template>
   <MenuItem>
   <template #icon>
@@ -14,10 +14,10 @@ import AboutIcon from './icons/AboutIcon.vue'
   <template #heading><router-link to="/chesstimer">Chess Timer</router-link></template>
   </MenuItem>
 
-  <!-- Lays out the about us block -->
+  <!-- Lays out the stop watch menu item-->
   <MenuItem>
   <template #icon>
-    <AboutIcon />
+    <StopWatchIcon />
   </template>
   <template #heading><router-link to="/stopwatch">Stop Watch</router-link></template>
   </MenuItem>

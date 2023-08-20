@@ -51,7 +51,7 @@ function start() {
 
 function lap(minutes, seconds) {
   const new_lap_time_string = `${minutes}:${seconds}`;
-  this.lap_time_list.push(new_lap_time_string)
+  this.lap_time_list.value.push(new_lap_time_string)
 }
 
 function reset() {
@@ -61,7 +61,7 @@ function reset() {
   min.value = 0;
   sec.value = 0;
   watchsec = 0;
-  this.lap_time_list = []
+  this.lap_time_list.value = []
 }
 </script>
         
